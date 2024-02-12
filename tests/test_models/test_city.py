@@ -53,7 +53,7 @@ class TestCity_instantiation(unittest.TestCase):
         cy1 = City()
         sleep(0.05)
         cy2 = City()
-        self.assertLess(cy1.created_at, cy2.created_at))
+        self.assertLess(cy1.created_at, cy2.created_at)
 
     def test_two_cities_different_updated_at(self):
         cy1 = City()
