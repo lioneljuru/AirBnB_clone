@@ -59,7 +59,7 @@ class TestCity_instantiation(unittest.TestCase):
         cy1 = City()
         sleep(0.05)
         cy2 = City()
-        self.assertLess(cy1.updated_at, cy2.updated_at))
+        self.assertLess(cy1.updated_at, cy2.updated_at)
 
     def test_str_representation(self):
         dt = datetime.today()
