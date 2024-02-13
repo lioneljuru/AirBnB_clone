@@ -452,7 +452,7 @@ class TestHBNBCommand_show(unittest.TestCase):
             self.assertEqual(obj.__str__(), output.getvalue().strip())
 
 
-class TestHBNBCommand_destroy(unittest_TestCase):
+class TestHBNBCommand_destroy(unittest.TestCase):
     """Unittests for testing from the HBNB command interpreter."""
 
     @classmethod
