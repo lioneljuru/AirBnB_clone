@@ -53,7 +53,7 @@ class TestState_instantiation(unittest.TestCase):
         st1 = State()
         sleep(0.05)
         st2 = State()
-        self.assertLess(st1.updated_at, st2.upated_at)
+        self.assertLess(st1.updated_at, st2.updated_at)
 
     def test_str_representation(self):
         dt = datetime.today()
@@ -90,7 +90,7 @@ class TestState_save(unittest.TestCase):
     @classmethod
     def setUp(self):
         try:
-            os.rename("file.json")
+            os.rename("file.json", "tmp")
         except IOError:
             pass
 
@@ -146,7 +146,7 @@ class TestState_to_dict(unittest.TestCase):
         self.assertIn("id", st.to_dict())
         self.assertIn("created_at", st.to_dict())
         self.assertIn("updated_at", st.to_dict())
-        self.assertIn("__class__". st.to_dict())
+        self.assertIn("__class__", st.to_dict())
 
     def test_to_dict_contains_added_attributes(self):
         st = State()
