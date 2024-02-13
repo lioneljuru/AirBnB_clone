@@ -14,7 +14,7 @@ from models.review import Review
 
 
 def parse(arg):
-    curly_braces = re.search(r"\{(.*?)",arg)
+    curly_braces = re.search(r"\{(.*?)", arg)
     brackets = re.search(r"\[(.*?)\]", arg)
     if curly_braces is None:
         if brackets is None:
@@ -48,7 +48,7 @@ class HBNBCommand(cmd.Cmd):
         "Amenity",
         "Review"
     }
-    
+
     def emptyline(self):
         """Do nothind upon receiving an empty line."""
         pass
@@ -108,7 +108,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
         elif len(argl) == 1:
             print("** instance id missing **")
-        elif "{}.{}".format(argl[0],argl[1]) not in objdict:
+        elif "{}.{}".format(argl[0], argl[1]) not in objdict:
             print("** no instance found **")
         else:
             print(objdict["{}.{}".format(argl[0], argl[1])])
@@ -124,7 +124,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
         elif len(argl) == 1:
             print("** instance id missing **")
-        elif "{}.{}".format(argl[0],argl[1]) not in objdict.keys():
+        elif "{}.{}".format(argl[0], argl[1]) not in objdict.keys():
             print("** no instance found **")
         else:
             def objdict["{}.{}".format(argl[0], argl[1])]
@@ -146,7 +146,7 @@ class HBNBCommand(cmd.Cmd):
                     objl.append(obj.__str__())
             print(objl)
 
-    def do_count(self,arg):
+    def do_count(self, arg):
         """Usage: count <class> or <class>.count()
         Retrieve the number of instances of a given class."""
         argl = parse(arg)
@@ -174,7 +174,7 @@ class HBNBCommand(cmd.Cmd):
         if len(argl) == 1:
             print("** instance id missing **")
             return False
-        if "{}.{}".format(argl[0],argl[1]) not in objdict.keys():
+        if "{}.{}".format(argl[0], argl[1]) not in objdict.keys():
             print("** no instance found **")
             return False
         if len(argl) == 2:
