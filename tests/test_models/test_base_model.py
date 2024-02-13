@@ -147,7 +147,7 @@ class TestBaseModel_to_dict(unittest.TestCase):
 
     def test_to_dict_contains_correct_keys(self):
         bm = BaseModel()
-        self.assertIn("is", bm.to_dict())
+        self.assertIn("id", bm.to_dict())
         self.assertIn("created_at", bm.to_dict())
         self.assertIn("updated_at", bm.to_dict())
         self.assertIn("__class__", bm.to_dict())
