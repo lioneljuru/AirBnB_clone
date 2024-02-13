@@ -123,7 +123,7 @@ class TestUser_save(unittest.TestCase):
         first_updated_at = us.updated_at
         us.save()
         second_updated_at = us.updated_at
-        self.assertLess(first_updated_at, second.updated_at)
+        self.assertLess(first_updated_at, second_updated_at)
         sleep(0.05)
         us.save()
         self.assertLess(second_updated_at, us.updated_at)
@@ -156,7 +156,7 @@ class TestUser_to_dict(unittest.TestCase):
 
     def test_to_dict_contains_added_attributes(self):
         us = User()
-        us.midlle_name = "Holberton"
+        us.middle_name = "Holberton"
         us.my_number = 98
         self.assertEqual("Holberton", us.middle_name)
         self.assertIn("my_number", us.to_dict())
