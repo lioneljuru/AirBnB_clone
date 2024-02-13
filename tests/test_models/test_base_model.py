@@ -17,7 +17,7 @@ from models.base_model import BaseModel
 class TestBaseModel_instantiation(unittest.TestCase):
     """Unittests for testing instantiation of the BaseModel class."""
 
-    def test_no_args_instantiation(self):
+    def test_no_args_instantiates(self):
         self.assertEqual(BaseModel, type(BaseModel()))
 
     def test_new_instance_stored_in_objects(self):
